@@ -1,0 +1,37 @@
+{
+  "challenge_id": "0b8c1f2e-3d4a-4b5c-8d6e-7f8091a2b3c4",
+  "options": {
+    "rp": {
+      "name": "Tally",
+      "id": "api.example.com"
+    },
+    "user": {
+      "id": "bxwrngpNTl-aixwtPk9aaw",
+      "name": "Luis",
+      "displayName": "Luis"
+    },
+    "challenge": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
+    "pubKeyCredParams": [
+      {
+        "type": "public-key",
+        "alg": -8
+      },
+      {
+        "type": "public-key",
+        "alg": -7
+      },
+      {
+        "type": "public-key",
+        "alg": -257
+      }
+    ],
+    "timeout": 300000,
+    "excludeCredentials": [],
+    "authenticatorSelection": {
+      "residentKey": "required",
+      "requireResidentKey": true,
+      "userVerification": "required"
+    },
+    "attestation": "none"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "challenge_id": "1c9d2a3f-4e5b-4c6d-9e7f-8091a2b3c4d5",
+  "options": {
+    "challenge": "ICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj8",
+    "timeout": 300000,
+    "rpId": "api.example.com",
+    "allowCredentials": [],
+    "userVerification": "required"
+  }
+}

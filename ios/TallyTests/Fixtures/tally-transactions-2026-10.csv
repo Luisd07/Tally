@@ -1,0 +1,9 @@
+﻿id,posted_date,transacted_at,account,amount,description,merchant,category,tax_line,bucket,source,pending,reviewed,notes,event,parent_id,is_split
+bbb0f694-f71f-4412-80d0-ffeb90ac07e3,2026-10-19,,Everyday Checking,-2.25,Live outbox check,,Meals,meals,personal,manual,false,true,,,7f41e10e-d621-4bad-88b8-f4bc3d30fabf,false
+7f41e10e-d621-4bad-88b8-f4bc3d30fabf,2026-10-19,,Everyday Checking,-7.25,Live outbox check,,Meals,meals,personal,manual,false,true,,,,true
+07453d60-f1da-45fb-b7ae-05197469713e,2026-10-19,,Everyday Checking,-7.25,Live outbox check,,Meals,meals,personal,manual,false,true,,,,false
+7ba11b7d-0077-58c1-9666-ca326fbec15c,2026-10-05,,Everyday Credit Card,-40.00,COSTCO WHOLESALE (travel share),,Travel,travel,personal,manual,false,false,,,41d7909b-e9f8-50a7-b340-d8838f22c625,false
+41d7909b-e9f8-50a7-b340-d8838f22c625,2026-10-05,,Everyday Credit Card,-100.00,COSTCO WHOLESALE,,Groceries,,personal,simplefin,false,false,,,,true
+398397b0-a541-5614-8603-7c6a2f40993f,2026-10-05,,Everyday Credit Card,-60.00,COSTCO WHOLESALE (groceries share),,Groceries,,personal,manual,false,false,,,41d7909b-e9f8-50a7-b340-d8838f22c625,false
+dae7976e-469f-57b9-b353-60a1e2b5b8b2,2026-10-02,,Everyday Checking,-52.10,WHOLE FOODS MARKET,,Groceries,,personal,simplefin,false,false,,,,false
+cf065f5f-39b5-5448-933a-b4f766a0cb7b,2026-10-01,,Everyday Checking,-4.50,Corner coffee shop,,Groceries,,personal,manual,false,false,,,,false

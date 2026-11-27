@@ -1,0 +1,70 @@
+services:
+  caddy:
+    image: caddy:2
+    ports: ["80:80", "443:443"]          # the only published ports
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    environment:
+      API_DOMAIN: ${API_DOMAIN}
+      APNS_TEAM_ID: ${APNS_TEAM_ID:-}   # Apple Team ID for the passkey association file
+    depends_on:
+      api: { condition: service_healthy }
+    restart: unless-stopped
+
+  db:
+    image: postgres:16
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Production secrets as files (#23): tmpfs filled from Secret Manager at boot.
+      - ${TALLY_SECRETS_DIR:-./secrets}:/run/secrets:ro
+    env_file: .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 10s
+      retries: 5
+    restart: unless-stopped
+
+  api:
+    build: ./api
+    command: >-
+      uvicorn --factory app.main:create_app --host 0.0.0.0 --port 8000
+      --proxy-headers --forwarded-allow-ips="*" --no-access-log
+    expose: ["8000"]                    # Compose network only
+    volumes:
+      - receipts:/data/receipts
+      - ./backups:/backups:ro
+      - ${TALLY_SECRETS_DIR:-./secrets}:/run/secrets:ro   # secret files + apns.p8 (#23)
+    env_file: .env
+    environment:
+      ENVIRONMENT: production           # wins over .env; never run production as development
+    depends_on:
+      db: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+
+  worker:
+    build: ./api
+    command: python -m app.worker
+    volumes:
+      - receipts:/data/receipts
+      - ./backups:/backups
+      - ${TALLY_SECRETS_DIR:-./secrets}:/run/secrets:ro
+    env_file: .env
+    environment:
+      ENVIRONMENT: production
+    depends_on:
+      db: { condition: service_healthy }
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  receipts:
+  caddy_data:
+  caddy_config:

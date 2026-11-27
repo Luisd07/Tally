@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Tinted appearance: grayscale on transparent; iOS applies the user's tint. -->
+  <g fill="#FFFFFF">
+    <rect x="292" y="292" width="72" height="440" rx="36"/>
+    <rect x="412" y="292" width="72" height="440" rx="36"/>
+    <rect x="532" y="292" width="72" height="440" rx="36"/>
+    <rect x="652" y="292" width="72" height="440" rx="36"/>
+  </g>
+  <rect x="190" y="476" width="644" height="72" rx="36" fill="#A6A6A6" transform="rotate(-28 512 512)"/>
+</svg>

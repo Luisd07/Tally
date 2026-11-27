@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Env / secrets
+.env
+*.p8
+secrets/
+
+# Data
+backups/*
+!backups/.gitkeep
+
+# Xcode
+ios/**/xcuserdata/
+ios/**/DerivedData/
+*.xcuserstate
+.DS_Store
+
+# Local tooling
+.mypy_cache/
+CLAUDE.local.md
+
+# mightymodels working state (review reports, tickets)
+.mightymodels/

@@ -1,0 +1,51 @@
+[project]
+name = "tally"
+version = "0.1.0"
+description = "Tally API: expense tracker backend (FastAPI + PostgreSQL)"
+requires-python = ">=3.14"
+dependencies = [
+    "alembic>=1.20.0",
+    "anthropic>=1",
+    "apscheduler>=3.10,<4",
+    "cryptography>=50.0.2",
+    "fastapi>=0.143.1",
+    "httpx[http2]>=0.28.1",
+    "limits>=5.8.0",
+    "loguru>=0.7.3",
+    "pillow>=12.3.0",
+    "psycopg[binary]>=3.3.6",
+    "pydantic-settings>=2.16.0",
+    "pyjwt[crypto]>=2.15.1",
+    "python-multipart>=0.0.32",
+    "sqlalchemy>=2",
+    "uvicorn[standard]>=0.54.0",
+    "webauthn>=3.0.1",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.13.1",
+    "pip-audit>=2.10.1",
+    "pyright>=1.1.414",
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["--strict-markers"]
+filterwarnings = ["error"]
+
+[tool.pyright]
+include = ["app", "tests", "scripts", "alembic"]
+pythonVersion = "3.14"
+typeCheckingMode = "standard"
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
