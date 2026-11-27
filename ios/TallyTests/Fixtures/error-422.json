@@ -1,0 +1,1 @@
+{"error":{"code":"validation_error","message":"Invalid request.","request_id":"7f97f4e426a44b86a522578f29e26c92","details":[{"type":"value_error","loc":["query","month"],"msg":"Value error, month must be formatted YYYY-MM"}]}}

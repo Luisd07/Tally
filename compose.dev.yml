@@ -1,0 +1,6 @@
+# Local development only: publishes Postgres on 127.0.0.1 so the API and tests
+# can run on the host. Never use this file on the VM.
+#   docker compose -f docker-compose.yml -f compose.dev.yml up -d db
+services:
+  db:
+    ports: ["127.0.0.1:${DB_HOST_PORT:-5433}:5432"]

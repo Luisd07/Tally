@@ -1,0 +1,13 @@
+{
+  // The Python project lives in api/, not the repo root.
+  "python.defaultInterpreterPath": "${workspaceFolder}/api/.venv/Scripts/python.exe",
+  "python.analysis.extraPaths": ["${workspaceFolder}/api"],
+  "python.testing.pytestEnabled": true,
+  "python.testing.cwd": "${workspaceFolder}/api",
+  "python.testing.pytestArgs": ["tests"],
+  "mypy-type-checker.cwd": "${workspaceFolder}/api",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true
+  }
+}

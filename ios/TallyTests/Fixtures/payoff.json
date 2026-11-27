@@ -1,0 +1,103 @@
+{
+  "budget": "400.00",
+  "requested_budget": "400.00",
+  "clamped": false,
+  "planned_budget": "250.00",
+  "months_to_debt_free": 48,
+  "debt_free_month": "2030-10",
+  "total_interest": "2007.12",
+  "cards": [
+    {
+      "account_id": "8b3c1d2e-0000-4000-8000-000000000001",
+      "name": "Sapphire",
+      "owed": "3000.00",
+      "apr": "24.99",
+      "promo_apr_end": null,
+      "planned_payment": "100.00",
+      "minimum_payment": "100.00",
+      "months_to_payoff": 48,
+      "payoff_month": "2030-10",
+      "total_interest": "1755.83",
+      "promo": null
+    },
+    {
+      "account_id": "8b3c1d2e-0000-4000-8000-000000000002",
+      "name": "Freedom",
+      "owed": "1000.00",
+      "apr": "18.00",
+      "promo_apr_end": null,
+      "planned_payment": "50.00",
+      "minimum_payment": "50.00",
+      "months_to_payoff": 24,
+      "payoff_month": "2028-10",
+      "total_interest": "197.84",
+      "promo": null
+    },
+    {
+      "account_id": "8b3c1d2e-0000-4000-8000-000000000003",
+      "name": "Slate",
+      "owed": "1200.00",
+      "apr": "21.00",
+      "promo_apr_end": "2027-04-01",
+      "planned_payment": "100.00",
+      "minimum_payment": "100.00",
+      "months_to_payoff": 13,
+      "payoff_month": "2027-11",
+      "total_interest": "53.45",
+      "promo": {
+        "ends": "2027-04-01",
+        "months_left": 5,
+        "monthly_payment": "240.00",
+        "short": true
+      }
+    }
+  ],
+  "avalanche": {
+    "strategy": "avalanche",
+    "order": [
+      {
+        "account_id": "8b3c1d2e-0000-4000-8000-000000000001",
+        "name": "Sapphire",
+        "payoff_month": "2027-12"
+      },
+      {
+        "account_id": "8b3c1d2e-0000-4000-8000-000000000002",
+        "name": "Freedom",
+        "payoff_month": "2028-01"
+      },
+      {
+        "account_id": "8b3c1d2e-0000-4000-8000-000000000003",
+        "name": "Slate",
+        "payoff_month": "2027-11"
+      }
+    ],
+    "months_to_debt_free": 15,
+    "debt_free_month": "2028-01",
+    "total_interest": "704.10",
+    "interest_saved": "1303.02"
+  },
+  "snowball": {
+    "strategy": "snowball",
+    "order": [
+      {
+        "account_id": "8b3c1d2e-0000-4000-8000-000000000002",
+        "name": "Freedom",
+        "payoff_month": "2027-04"
+      },
+      {
+        "account_id": "8b3c1d2e-0000-4000-8000-000000000003",
+        "name": "Slate",
+        "payoff_month": "2027-06"
+      },
+      {
+        "account_id": "8b3c1d2e-0000-4000-8000-000000000001",
+        "name": "Sapphire",
+        "payoff_month": "2028-01"
+      }
+    ],
+    "months_to_debt_free": 15,
+    "debt_free_month": "2028-01",
+    "total_interest": "762.08",
+    "interest_saved": "1245.04"
+  }
+}

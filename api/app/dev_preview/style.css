@@ -1,0 +1,16 @@
+body { font: 14px/1.4 system-ui, sans-serif; margin: 0; color: #222; background: #fafafa; }
+header { padding: 8px 16px; background: #fff; border-bottom: 1px solid #ddd; }
+nav { margin-top: 6px; }
+nav button { margin-right: 4px; }
+nav button.active { font-weight: bold; background: #dde8ff; }
+main { padding: 16px; max-width: 1100px; }
+h2 { margin-top: 0; }
+table { border-collapse: collapse; background: #fff; margin: 8px 0; }
+th, td { border: 1px solid #ddd; padding: 4px 8px; text-align: left; vertical-align: top; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.controls { margin: 8px 0; }
+.controls label { margin-right: 12px; }
+.muted { color: #777; }
+.error { background: #fde8e8; border: 1px solid #e0a0a0; padding: 8px 16px; white-space: pre-wrap; }
+.ok { color: #1a7f37; }
+pre { background: #fff; border: 1px solid #ddd; padding: 8px; overflow: auto; margin: 0; }

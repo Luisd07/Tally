@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Dark appearance: no background, iOS draws its own dark backdrop. -->
+  <g fill="#4AAEF0">
+    <rect x="292" y="292" width="72" height="440" rx="36"/>
+    <rect x="412" y="292" width="72" height="440" rx="36"/>
+    <rect x="532" y="292" width="72" height="440" rx="36"/>
+    <rect x="652" y="292" width="72" height="440" rx="36"/>
+  </g>
+  <rect x="190" y="476" width="644" height="72" rx="36" fill="#FFB547" transform="rotate(-28 512 512)"/>
+</svg>
